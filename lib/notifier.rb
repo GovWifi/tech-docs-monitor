@@ -113,7 +113,8 @@ class Notifier
   end
 
   def post_to_slack?
-    @live
+    # @live
+    true
   end
 
   private
