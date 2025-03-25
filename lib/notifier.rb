@@ -74,7 +74,8 @@ class Notifier
     pages
       .reject { |page| page.review_by.nil? }
       .select { |page| @notification.include?(page) }
-      .group_by { |page| page.owner }
+      # .group_by { |page| page.owner }
+      .group_by { |page| page.owner_slack || "#general" } # use 'owner_slack'
       .map do |owner, pages|
         [owner, pages.sort_by { |page| page.review_by }]
       end
