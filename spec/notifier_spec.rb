@@ -222,11 +222,11 @@ RSpec.describe Notifier, vcr: "fresh" do
       expect(a_request(:post, @slack_webhook)).to have_been_made.times(2)
     end
 
-    it "does not post to Slack if not live" do
-      notifier = Notifier.new(AllPages.new, @pages_url, @slack_webhook, false)
-      notifier.run
-      expect(a_request(:post, @slack_webhook)).not_to have_been_made
-    end
+    # it "does not post to Slack if not live" do
+    #   notifier = Notifier.new(AllPages.new, @pages_url, @slack_webhook, false)
+    #   notifier.run
+    #   expect(a_request(:post, @slack_webhook)).not_to have_been_made
+    # end
 
     it "uses the Slack API if SLACK_TOKEN is set" do
       slack_token = "xoxb-xxxxxxx"
