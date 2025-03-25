@@ -56,6 +56,9 @@ class Notifier
 
   def pages
     begin
+      response = HTTP.get(@pages_url).to_s
+      puts "== Fetched JSON from #{@pages_url}:"
+      puts response
       JSON.parse(HTTP.get(@pages_url)).map { |data|
         data['url'] = get_absolute_url(data['url'])
         Page.new(data)
