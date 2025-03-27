@@ -20,6 +20,7 @@ class Notifier
     payloads = message_payloads(pages_per_channel)
 
     return if payloads.empty?
+    prints("Echoing test var #{ENV['slack_url']}")
 
     puts "== JSON Payload:"
     puts JSON.pretty_generate(payloads)
