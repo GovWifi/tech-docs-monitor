@@ -12,7 +12,7 @@
     },
     "REALLY_POST_TO_SLACK": {
       "description": "Messages will only be posted to Slack if the value of this var is `1`.",
-      "value": "0"
+      "value": "1"
     }
   },
   "addons": [
