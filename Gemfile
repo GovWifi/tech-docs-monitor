@@ -4,7 +4,7 @@ ruby File.read('.ruby-version').strip
 
 gem 'activesupport'
 gem 'chronic'
-gem 'http'
+gem 'http', '>= 6.0.4'
 gem 'rake'
 
 group :test do
