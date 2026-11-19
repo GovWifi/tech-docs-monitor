@@ -28,7 +28,7 @@ GEM
     domain_name (0.6.20240107)
     drb (2.2.3)
     hashdiff (1.2.1)
-    http (6.0.3)
+    http (6.0.4)
       http-cookie (~> 1.0)
       llhttp (~> 0.6.1)
     http-cookie (1.1.6)
@@ -75,7 +75,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   chronic
-  http
+  http (>= 6.0.4)
   rake
   rexml
   rspec
